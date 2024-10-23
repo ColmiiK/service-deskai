@@ -27,8 +27,8 @@ const ImageUploader = () => {
       />
       {image && (
         <div className={styles.previewContainer}>
-          <h3>Preview</h3>
           <img src={image} alt="Preview" className={styles.previewImage} />
+          <br />
           <button onClick={handleRemoveImage} className={styles.removeButton}>
             Remove Image
           </button>
