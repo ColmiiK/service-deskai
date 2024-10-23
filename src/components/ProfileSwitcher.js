@@ -5,6 +5,7 @@ import styles from "./ProfileSwitcher.module.css";
 const ProfileSwitcher = ({ currentRole, onChangeRole }) => {
   return (
     <div className={styles.ProfileSwitcher}>
+      <br />
       <label htmlFor="profile">Select profile: </label>
       <select
         id="profile"
