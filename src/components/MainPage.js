@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import CreateTicket from "../components/CreateTicket";
 import styles from "./LogoutButton.module.css";
 import CameraComponent from "./CameraComponent";
+import TicketList from "./TicketList";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const MainPage = () => {
   };
   return (
     <div>
+      <TicketList />
       <CreateTicket />
       <CameraComponent />
       <div className={styles.buttonContainer}>
