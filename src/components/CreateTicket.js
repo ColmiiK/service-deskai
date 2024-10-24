@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./CreateTicket.module.css";
 
 const CreateTicket = () => {
   const [image, setImage] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
+  const fileInputRef = useRef(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -27,6 +29,9 @@ const CreateTicket = () => {
     setTitle("");
     setDescription("");
     setImage(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
   return (
     <div className={styles.createTicketContainer}>
@@ -47,6 +52,7 @@ const CreateTicket = () => {
         <div className={styles.formGroup}>
           <label htmlFor="description">Description</label>
           <textarea
+            type="text"
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -62,6 +68,7 @@ const CreateTicket = () => {
             accept="image/*"
             onChange={handleImageChange}
             className={styles.uploadInput}
+            ref={fileInputRef}
           />
         </div>
         {image && (
