@@ -7,7 +7,3 @@ A (non functioning) repair app with integrated AI
 ```
 npm start
 ```
-
-```
-
-```
