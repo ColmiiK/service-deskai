@@ -16,7 +16,6 @@ const MainPage = () => {
     <div>
       <TicketList />
       <CreateTicket />
-      <CameraComponent />
       <div className={styles.buttonContainer}>
         <button className={styles.logoutButton} onClick={handleLogout}>
           Logout
